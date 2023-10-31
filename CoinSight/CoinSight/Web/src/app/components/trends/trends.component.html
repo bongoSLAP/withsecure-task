@@ -32,7 +32,7 @@
         <input type="number" class="number-input" [(ngModel)]="recDays" name="Days" min="1" (ngModelChange)="recModelChange()" required>
       </div>
       <div>
-        <label for="topN">Amount of top coins to analyse <b>(max 10)</b>:</label>
+        <label for="topN">Amount of top coins to analyse <b>(max. 10)</b>:</label>
         <input type="number" class="number-input" [(ngModel)]="recTopN" name="TopN" min="2" max="10" (ngModelChange)="recModelChange()" required>
       </div>
       <div>
@@ -40,7 +40,7 @@
       </div>
 
       <div *ngIf="isRecVisible && !isRecError" [style.visibility]="isRecVisible && !isRecError ? 'visible' : 'hidden'">
-        <p>Here are the top {{recTopN}} reccomendations for {{recCoinId.charAt(0).toUpperCase() + recCoinId.slice(1)}} in the past {{recDays}} day(s).</p>
+        <p>Here are the top reccomendations for {{recCoinId.charAt(0).toUpperCase() + recCoinId.slice(1)}} in the past {{recDays}} day(s) out of {{recTopN}} top coins.</p>
         <ol>
           <li *ngFor="let result of recResult">{{result}}</li>
         </ol>
