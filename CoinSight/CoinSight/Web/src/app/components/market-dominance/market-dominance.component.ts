@@ -30,7 +30,7 @@ export class MarketDominanceComponent implements OnInit {
     }
 
     let request = new MarketDominanceRequest();
-    request.coinId = this.coinId;
+    request.coinId = this.coinId.toLowerCase();
     request.topN = this.topN;
 
     this.domSub = this.dominanceService.post(request).subscribe(

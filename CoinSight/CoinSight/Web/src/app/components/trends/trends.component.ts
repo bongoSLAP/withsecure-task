@@ -44,7 +44,7 @@ export class TrendsComponent implements OnInit {
     }
 
     let request = new TrendsRequest();
-    request.coinId = this.trendCoinId;
+    request.coinId = this.trendCoinId.toLowerCase();
     request.days = this.trendDays;
 
     this.trendsSub = this.trendsService.postTrends(request).subscribe(

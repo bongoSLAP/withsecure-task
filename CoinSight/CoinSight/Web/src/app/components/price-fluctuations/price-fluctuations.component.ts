@@ -32,7 +32,7 @@ export class PriceFluctuationsComponent implements OnInit {
     }
 
     let request = new PriceFluctuationRequest();
-    request.coinId = this.coinId;
+    request.coinId = this.coinId.toLowerCase();
     request.days = this.days;
 
     this.fluctSub = this.fluctuationService.post(request).subscribe(
