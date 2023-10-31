@@ -1,0 +1,50 @@
+<div class="trends-container">
+  <div class="form-container">
+    <h2>Trends</h2>
+    <p class="description">Identify an upwards or downwards trend of a coin over a period of <b>x</b> days.</p>
+    <div>
+      <label for="coinId">Coin ID:</label>
+      <input type="text" class="coin-id-input" [(ngModel)]="trendCoinId" name="CoinId" (ngModelChange)="trendModelChange()" required>
+    </div>
+    <div>
+      <label for="days">Days <b>(min. 1)</b>:</label>
+      <input type="number" class="number-input" [(ngModel)]="trendDays" name="Days" min="1" (ngModelChange)="trendModelChange()" required>
+    </div>
+    <div>
+      <input type="submit" class="submit" value="Get Trend" (click)="getTrend()">
+    </div>
+
+    <p [style.visibility]="isTrendVisible && isTrendError ? 'visible' : 'hidden'">{{trendResult}}</p>
+    <p [style.visibility]="isTrendVisible && !isTrendError ? 'visible' : 'hidden'">
+      The trend for {{trendCoinId.charAt(0).toUpperCase() + trendCoinId.slice(1)}} has been <b>{{trendResult ? 'downward' : 'upward'}}</b> over the past {{trendDays}} day(s).
+    </p>
+  </div>
+
+  <div class="form-container">
+    <h2>Trend Recommendations</h2>
+    <p class="description">Get a list of the top coins that follow the same trend as a coin over a period of <b>x</b> days.</p>
+      <div>
+        <label for="coinIdRec">Coin ID:</label>
+        <input type="text" class="coin-id-input" [(ngModel)]="recCoinId" name="CoinId" (ngModelChange)="recModelChange()" required>
+      </div>
+      <div>
+        <label for="daysRec">Days <b>(min. 1)</b>:</label>
+        <input type="number" class="number-input" [(ngModel)]="recDays" name="Days" min="1" (ngModelChange)="recModelChange()" required>
+      </div>
+      <div>
+        <label for="topN">Amount of top coins to analyse <b>(max 10)</b>:</label>
+        <input type="number" class="number-input" [(ngModel)]="recTopN" name="TopN" min="2" max="10" (ngModelChange)="recModelChange()" required>
+      </div>
+      <div>
+        <input type="submit" class="submit" value="Get Recommendations" (click)="getRecommendations()">
+      </div>
+
+      <div *ngIf="isRecVisible && !isRecError" [style.visibility]="isRecVisible && !isRecError ? 'visible' : 'hidden'">
+        <p>Here are the top {{recTopN}} reccomendations for {{recCoinId.charAt(0).toUpperCase() + recCoinId.slice(1)}} in the past {{recDays}} day(s).</p>
+        <ol>
+          <li *ngFor="let result of recResult">{{result}}</li>
+        </ol>
+      </div>
+      <p [style.visibility]="isRecVisible && isRecError ? 'visible' : 'hidden'">{{recResult}}</p>
+  </div>
+</div>

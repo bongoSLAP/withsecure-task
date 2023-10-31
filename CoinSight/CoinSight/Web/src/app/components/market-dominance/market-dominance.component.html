@@ -1,0 +1,22 @@
+<div class="market-dominance-container">
+  <div class="form-container">
+    <h2>Market Dominance</h2>
+    <p class="description">Identify the market dominance <b>(%)</b> of a coin over an <b>x</b> amount of top coins.</p>
+    <div>
+      <label for="coinId">Coin ID:</label>
+      <input type="text" class="coin-id-input" [(ngModel)]="coinId" name="CoinId" (ngModelChange)="modelChange()" required>
+    </div>
+    <div>
+      <label for="topN">Amount of top coins to analyse <b>(max. 20,000)</b>:</label>
+      <input type="number" class="number-input" [(ngModel)]="topN" name="TopN" min="2" (ngModelChange)="modelChange()" required>
+    </div>
+    <div>
+      <input type="submit" class="submit" value="Get Market Dominance" (click)="getDominance()">
+    </div>
+
+    <p [style.visibility]="isResultVisible && isResultError ? 'visible' : 'hidden'">{{result}}</p>
+    <p *ngIf="isResultVisible && !isResultError" [style.visibility]="isResultVisible && !isResultError ? 'visible' : 'hidden'">
+      The market dominance for {{coinId.charAt(0).toUpperCase() + coinId.slice(1)}} is <b>{{result.toFixed(2)}}%</b> out of {{topN}} coins.
+    </p>
+  </div>
+</div>

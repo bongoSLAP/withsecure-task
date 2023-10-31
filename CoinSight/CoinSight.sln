@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinSight", "CoinSight\CoinSight.csproj", "{43D82DAC-D35D-4D79-B347-F0F4BDE0CC19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinSight.Core", "CoinSight.Core\CoinSight.Core.csproj", "{4B7649C3-BC4B-4AC3-B8DB-415325A76C9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinSight.Handlers", "CoinSight.Handlers\CoinSight.Handlers.csproj", "{C864D991-31F6-4E83-8F9E-F77E8ED4E470}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinSight.Services", "CoinSight.Services\CoinSight.Services.csproj", "{5A25EA64-DE9B-424C-B492-61EB1A453540}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43D82DAC-D35D-4D79-B347-F0F4BDE0CC19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43D82DAC-D35D-4D79-B347-F0F4BDE0CC19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43D82DAC-D35D-4D79-B347-F0F4BDE0CC19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43D82DAC-D35D-4D79-B347-F0F4BDE0CC19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B7649C3-BC4B-4AC3-B8DB-415325A76C9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B7649C3-BC4B-4AC3-B8DB-415325A76C9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B7649C3-BC4B-4AC3-B8DB-415325A76C9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B7649C3-BC4B-4AC3-B8DB-415325A76C9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C864D991-31F6-4E83-8F9E-F77E8ED4E470}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C864D991-31F6-4E83-8F9E-F77E8ED4E470}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C864D991-31F6-4E83-8F9E-F77E8ED4E470}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C864D991-31F6-4E83-8F9E-F77E8ED4E470}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A25EA64-DE9B-424C-B492-61EB1A453540}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A25EA64-DE9B-424C-B492-61EB1A453540}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A25EA64-DE9B-424C-B492-61EB1A453540}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A25EA64-DE9B-424C-B492-61EB1A453540}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

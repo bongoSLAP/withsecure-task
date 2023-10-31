@@ -1,0 +1,16 @@
+.home-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+  max-width: 1200px;
+  margin: 0 auto; 
+}
+
+.about-container {
+  margin: 0 20px;
+  padding: 20px;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  background-color: #fff;
+}
